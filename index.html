@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PBL 2026 | Crop Disease Detector</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-slate-950 text-slate-100 font-sans" onload="startTimer()">
+
+<!-- AUTO TIMER -->
+<div id="timer" class="fixed bottom-6 right-6 bg-white text-black px-6 py-3 rounded-xl font-mono text-2xl shadow-xl">
+  00:00
+</div>
+
+<!-- TITLE -->
+<section class="text-center py-24">
+  <h1 class="text-5xl font-extrabold text-blue-400">
+    Crop Disease Detector with Weather-Based Early Warning
+  </h1>
+  <p class="mt-6 text-slate-400 italic max-w-3xl mx-auto">
+    A hybrid machine learning approach integrating CNN-based crop disease detection
+    with climate-driven risk prediction for early farmer alerts.
+  </p>
+  <p class="mt-6 text-sm text-slate-500">
+    Registration ID: <b>2427030828</b>
+  </p>
+</section>
+
+<!-- INTRODUCTION -->
+<section class="max-w-5xl mx-auto px-6 py-16">
+  <h2 class="text-3xl font-bold text-blue-300 mb-4">Introduction</h2>
+  <p class="text-slate-300 leading-relaxed">
+    Crop diseases significantly reduce agricultural productivity due to delayed detection.
+    Farmers often lack technical tools for early diagnosis. Weather conditions such as humidity,
+    rainfall, and temperature accelerate disease spread. This project proposes a hybrid ML-based
+    early warning system combining image analysis and weather data.
+  </p>
+</section>
+
+<!-- LITERATURE REVIEW -->
+<section class="max-w-5xl mx-auto px-6 py-16 bg-slate-900 rounded-3xl">
+  <h2 class="text-3xl font-bold text-purple-300 mb-4">Literature Survey</h2>
+  <ul class="list-disc list-inside text-slate-300 space-y-2">
+    <li>Deep CNNs provide high accuracy but require large datasets</li>
+    <li>Weather-based risk prediction enables preventive alerts</li>
+    <li>Most existing mobile tools lack hybrid prediction</li>
+    <li>Hybrid image + climate systems improve reliability</li>
+    <li>PlantVillage dataset is widely used in crop disease research</li>
+  </ul>
+</section>
+
+<!-- PROBLEM STATEMENT -->
+<section class="max-w-5xl mx-auto px-6 py-16">
+  <h2 class="text-3xl font-bold text-red-300 mb-4">Problem Statement</h2>
+  <p class="text-slate-300 leading-relaxed">
+    Crop diseases and climatic variations cause large-scale agricultural losses.
+    Farmers lack accessible tools for early disease detection and climate-based risk prediction.
+    Existing systems focus on isolated approaches, reducing prediction accuracy.
+  </p>
+</section>
+
+<!-- OBJECTIVES -->
+<section class="max-w-5xl mx-auto px-6 py-16 bg-slate-900 rounded-3xl">
+  <h2 class="text-3xl font-bold text-green-300 mb-4">Objectives</h2>
+  <ul class="list-disc list-inside text-slate-300 space-y-2">
+    <li>Develop CNN-based crop disease classification</li>
+    <li>Build weather-driven disease risk prediction model</li>
+    <li>Integrate both models for early-warning alerts</li>
+    <li>Improve reliability using hybrid prediction</li>
+    <li>Deploy a lightweight demonstration prototype</li>
+  </ul>
+</section>
+
+<!-- METHODOLOGY -->
+<section class="max-w-5xl mx-auto px-6 py-16">
+  <h2 class="text-3xl font-bold text-yellow-300 mb-4">Proposed Methodology</h2>
+  <ol class="list-decimal list-inside text-slate-300 space-y-2">
+    <li>Collect and clean leaf image datasets</li>
+    <li>Gather weather parameters (temperature, humidity, rainfall)</li>
+    <li>Preprocess data using normalization and augmentation</li>
+    <li>Train CNN for disease detection</li>
+    <li>Train ML model (RF / XGBoost / LSTM) for climate risk</li>
+    <li>Integrate models with weighted scoring</li>
+    <li>Develop dashboard for visualization</li>
+  </ol>
+</section>
+
+<!-- CURRENT STATUS -->
+<section class="max-w-5xl mx-auto px-6 py-16 bg-slate-900 rounded-3xl">
+  <h2 class="text-3xl font-bold text-cyan-300 mb-4">Current Project Status</h2>
+  <p class="text-slate-300 leading-relaxed">
+    This project is currently in the <b>design and planning phase</b>.
+    Dataset identification, algorithm selection, and system architecture
+    have been completed. Implementation and testing will be carried out
+    in the next phase of PBL.
+  </p>
+</section>
+
+<!-- CREDITS -->
+<section class="text-center py-20">
+  <p class="text-slate-400">Project Guide</p>
+  <p class="text-xl font-bold">Dr. Rishav Dubey</p>
+
+  <p class="mt-8 text-slate-400">Student</p>
+  <p class="text-xl font-bold">Ishna Ashutosh Sinha</p>
+</section>
+
+<script>
+let sec = 0;
+function startTimer() {
+  setInterval(() => {
+    sec++;
+    let m = String(Math.floor(sec / 60)).padStart(2, '0');
+    let s = String(sec % 60).padStart(2, '0');
+    document.getElementById("timer").innerText = `${m}:${s}`;
+  }, 1000);
+}
+</script>
+
+</body>
+</html>
